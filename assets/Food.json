@@ -1,0 +1,51 @@
+{
+    "foodCategoryItems": [
+      {
+        "id": 1,
+        "name": "Juice",
+        "foodItems": [
+          {
+            "id": 1,
+            "name": "Orange Juice",
+            "totalCalories": 230
+          },
+          {
+            "id": 2,
+            "name": "Mango Juice",
+            "totalCalories": 240
+          },
+          {
+            "id": 3,
+            "name": "Apple Juice",
+            "totalCalories": 250
+          },
+          {
+            "id": 4,
+            "name": "Alphonso Mango Juice",
+            "totalCalories": 260
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Biriyani",
+        "foodItems": [
+          {
+            "id": 1,
+            "name": "Vegetable Biriyani",
+            "totalCalories": 230
+          },
+          {
+            "id": 2,
+            "name": "Panneer Biriyani",
+            "totalCalories": 430
+          },
+          {
+            "id": 3,
+            "name": "Mushroom Biriyani",
+            "totalCalories": 330
+          }
+        ]
+      }
+    ]
+  }

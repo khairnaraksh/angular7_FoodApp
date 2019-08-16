@@ -10,7 +10,7 @@ import { MaterialModule } from 'src/app/material-module';
         HomeRoutingModule,
         CommonModule,
         MaterialModule,
-        FormsModule,
+        FormsModule
     ],
     declarations: [HomeComponent],
     exports: []

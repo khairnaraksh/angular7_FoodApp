@@ -1,35 +1,37 @@
-  <form>
+  <form #foodForm="ngForm">
     <mat-card>
-      <div class="row">
-        <div class="col-sm-4">
-          <mat-form-field class="full-width">
-            <mat-select placeholder="Food Category" required name="foodcategory" [(ngModel)]="foodModel.category"
-              (ngModelChange)="onChangeCategory($event)">
-              <mat-option>----- Select -----</mat-option>
-              <mat-option *ngFor="let cat of foodCategory" [value]="cat.name">{{cat.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Food Category" required name="foodcategory" [(ngModel)]="foodModel.category"
+                (ngModelChange)="onChangeCategory($event)">
+                <mat-option>----- Select -----</mat-option>
+                <mat-option *ngFor="let cat of foodCategory" [value]="cat.name">{{cat.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-4">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Food" required name="food" [(ngModel)]="foodModel.foodType"
+                (ngModelChange)="onChangeFood($event)">
+                <mat-option>----- Select -----</mat-option>
+                <mat-option *ngFor="let food of FoodType" [value]="food.name">{{food.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-4">
+            <mat-form-field class="full-width">
+              <input matInput type="text" placeholder="Calories" name="calories" [(ngModel)]="foodModel.calories">
+            </mat-form-field>
+          </div>
         </div>
-        <div class="col-sm-4">
-          <mat-form-field class="full-width">
-            <mat-select placeholder="Food" required name="food" [(ngModel)]="foodModel.foodType"
-              (ngModelChange)="onChangeFood($event)">
-              <mat-option>----- Select -----</mat-option>
-              <mat-option *ngFor="let food of FoodType" [value]="food.name">{{food.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+        <div class="row">
+          <button mat-raised-button color="green" (click)="saveFood(foodModel)">Save
+          </button>
+          <button mat-raised-button color="primary" routerLink="/MyLogs">Next
+          </button>
         </div>
-        <div class="col-sm-4">
-          <mat-form-field class="full-width">
-            <input matInput type="text" placeholder="Calories" name="calories" [(ngModel)]="foodModel.calories">
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <button mat-raised-button color="green" (click)="saveFood(foodModel)">Save
-        </button>
-        <button mat-raised-button color="primary">Cancel
-        </button>
       </div>
     </mat-card>
   </form>

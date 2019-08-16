@@ -1,6 +1,29 @@
-<p>
-  my-logs works!
-</p>
+<mat-card>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortActive="created"
+    matSortDisableClear matSortDirection="desc">
+    <!-- Position Column -->
+    <ng-container matColumnDef="foodcategory">
+      <th mat-header-cell *matHeaderCellDef> Categories </th>
+      <td mat-cell *matCellDef="let element"> {{element.foodcategory}} </td>
+    </ng-container>
 
-<button mat-raised-button color="primary">Back
+    <!-- Name Column -->
+    <ng-container matColumnDef="food">
+      <th mat-header-cell *matHeaderCellDef> Food </th>
+      <td mat-cell *matCellDef="let element"> {{element.food}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="calories">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Calories </th>
+      <td mat-cell *matCellDef="let element"> {{element.calories}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <br />
+  <button mat-raised-button color="primary" (click)="backtoHome()">Back
   </button>
+
+</mat-card>
